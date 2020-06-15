@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="casual"
+        android:text="Test"
+        android:textSize="26sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Button"
+        android:layout_width="277dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="560dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#00BCD4"
+        android:fontFamily="@font/audiowide"
+        android:onClick="restart"
+        android:shadowColor="#00BCD4"
+        android:text="@string/button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="368dp"
+        android:layout_height="368dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/board"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="3">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:onClick="placeCounter"
+            android:tag="1"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="8dp"
+            android:onClick="placeCounter"
+            android:tag="2"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="8dp"
+            android:onClick="placeCounter"
+            android:tag="3"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="26dp"
+            android:onClick="placeCounter"
+            android:tag="4"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/iv5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="26dp"
+            android:onClick="placeCounter"
+            android:tag="5"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/iv6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="26dp"
+            android:onClick="placeCounter"
+            android:tag="6"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/iv7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="25dp"
+            android:onClick="placeCounter"
+            android:tag="7"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/iv8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="25dp"
+            android:onClick="placeCounter"
+            android:tag="8"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/iv9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="25dp"
+            android:onClick="placeCounter"
+            android:tag="9"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/redWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="cursive"
+        android:text="Red: 0"
+        android:textColor="#F00C0C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/yellowWins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yellowWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="cursive"
+        android:text="Yellow:  0"
+        android:textColor="#C5A914"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redWins" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="#FFEB3B"
+        android:fontFamily="@font/audiowide"
+        android:onClick="reset"
+        android:text="Reset"
+        android:textColor="#139732"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toEndOf="@+id/yellowWins"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
