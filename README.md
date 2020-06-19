@@ -1,4 +1,7 @@
 # Connect3
 Connect 3 game
 
-This project was made while learning Android Development as a part of the course.
+It's a 2 player Game.
+The aim of the Game is to connect 3 of your coloured pegs in a row before the second player connets his pegs. 
+
+I made this project while learning Android Development from the course facilitated by Rob Percival & Nick Walter.
