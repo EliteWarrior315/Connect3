@@ -1,4 +1,4 @@
-# Connect3
+# Connect3 :video_game:
 Connect 3 game
 
 It's a 2 player Game.
